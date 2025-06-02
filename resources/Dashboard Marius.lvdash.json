@@ -17,6 +17,21 @@
         "width" : 3,
         "height" : 6
       }
+    }, {
+      "widget" : {
+        "name" : "08731e7c",
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "bar",
+          "encodings" : { }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 0,
+        "width" : 3,
+        "height" : 6
+      }
     } ],
     "pageType" : "PAGE_TYPE_CANVAS"
   } ]
