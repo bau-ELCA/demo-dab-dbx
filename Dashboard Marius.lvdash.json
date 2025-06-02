@@ -1,0 +1,23 @@
+{
+  "pages" : [ {
+    "name" : "ba8e1bad",
+    "displayName" : "Empty dashboard",
+    "layout" : [ {
+      "widget" : {
+        "name" : "9d6ade49",
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "bar",
+          "encodings" : { }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "width" : 3,
+        "height" : 6
+      }
+    } ],
+    "pageType" : "PAGE_TYPE_CANVAS"
+  } ]
+}
