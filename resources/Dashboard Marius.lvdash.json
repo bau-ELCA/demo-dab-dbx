@@ -32,6 +32,21 @@
         "width" : 3,
         "height" : 6
       }
+    }, {
+      "widget" : {
+        "name" : "84f82fac",
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "bar",
+          "encodings" : { }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 6,
+        "width" : 3,
+        "height" : 6
+      }
     } ],
     "pageType" : "PAGE_TYPE_CANVAS"
   } ]
