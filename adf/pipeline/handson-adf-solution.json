@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "Ingestion into Bronze",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -50,7 +50,8 @@
 						"referenceName": "datasetParquet",
 						"type": "DatasetReference",
 						"parameters": {
-							"directory": "raw-data"
+							"directory": "raw-data",
+							"filename": "export_1748943617440.parquet"
 						}
 					}
 				],
