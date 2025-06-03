@@ -1,0 +1,9 @@
+{
+	"name": "loro-dbx-training-adf",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "switzerlandnorth"
+}
