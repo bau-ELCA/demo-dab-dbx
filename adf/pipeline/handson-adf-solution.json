@@ -65,6 +65,67 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "Failed Ingestion",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "Ingestion into Bronze",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Ingestion failed",
+					"errorCode": "1234"
+				}
+			},
+			{
+				"name": "NB - Hello World",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Ingestion into Bronze",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/saoud.akram@elca.ch/Hello World"
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedServiceAzureDatabricks",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Failed Notebook run",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "NB - Hello World",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Failed to run notebook",
+					"errorCode": "1234"
+				}
 			}
 		],
 		"annotations": []
