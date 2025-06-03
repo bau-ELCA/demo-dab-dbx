@@ -1,0 +1,10 @@
+{
+	"name": "linkedServiceAzureKeyVault",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://loro-dbx-training-acl-kv.vault.azure.net/"
+		}
+	}
+}
