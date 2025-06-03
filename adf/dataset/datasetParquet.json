@@ -27,7 +27,7 @@
 					"type": "Expression"
 				},
 				"fileSystem": {
-					"value": "hands-on",
+					"value": "handson-adf",
 					"type": "Expression"
 				}
 			},
