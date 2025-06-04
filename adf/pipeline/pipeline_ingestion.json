@@ -1,0 +1,11 @@
+{
+	"name": "pipeline_ingestion",
+	"properties": {
+		"parameters": {
+			"visa": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}
