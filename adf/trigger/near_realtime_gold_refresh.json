@@ -1,5 +1,5 @@
 {
-	"name": "daily_gold_refresh",
+	"name": "near_realtime_gold_refresh",
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Stopped",
