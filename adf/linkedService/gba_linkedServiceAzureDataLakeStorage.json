@@ -1,0 +1,10 @@
+{
+	"name": "gba_linkedServiceAzureDataLakeStorage",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://lorodbxtrainingdl.dfs.core.windows.net/"
+		}
+	}
+}
