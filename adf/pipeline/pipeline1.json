@@ -50,8 +50,14 @@
 						"referenceName": "datasetParquet",
 						"type": "DatasetReference",
 						"parameters": {
-							"directory": "raw-data",
-							"filename": "export_1748943617440.parquet"
+							"directory": {
+								"value": "raw-data",
+								"type": "Expression"
+							},
+							"filename": {
+								"value": "export_1748943617440.parquet",
+								"type": "Expression"
+							}
 						}
 					}
 				],
