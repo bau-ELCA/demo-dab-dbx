@@ -1,5 +1,5 @@
 {
-	"name": "Ingestion2",
+	"name": "Pipeline",
 	"properties": {
 		"activities": [
 			{
@@ -65,6 +65,39 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "Process data",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Ingestion",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/charlotte.bondaz@loro.ch/(Clone) Hands-On: ADF & Databricks",
+					"baseParameters": {
+						"visa": {
+							"value": "@pipeline().parameters.visa",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedServiceAzureDatabricks",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"parameters": {
