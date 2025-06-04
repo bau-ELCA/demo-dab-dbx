@@ -29,7 +29,8 @@
 					"sink": {
 						"type": "ParquetSink",
 						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
+							"type": "AzureBlobFSWriteSettings",
+							"copyBehavior": "PreserveHierarchy"
 						},
 						"formatSettings": {
 							"type": "ParquetWriteSettings"
@@ -69,7 +70,8 @@
 		],
 		"parameters": {
 			"visa": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "qkr"
 			}
 		},
 		"annotations": []
