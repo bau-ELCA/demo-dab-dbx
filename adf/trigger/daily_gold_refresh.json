@@ -1,0 +1,27 @@
+{
+	"name": "daily_gold_refresh",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Pipeline",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"visa": "cbo"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2025-06-05T08:46:00",
+				"timeZone": "Romance Standard Time"
+			}
+		}
+	}
+}
