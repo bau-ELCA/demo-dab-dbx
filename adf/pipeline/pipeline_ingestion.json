@@ -86,7 +86,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/hamza.slimani@loro.ch/J4: Unity Catalog & ADF/Hands-On: ADF & Databricks",
+					"notebookPath": "/Users/quentin.krenger@loro.ch/(Clone) Hands-On: ADF & Databricks",
 					"baseParameters": {
 						"visa": "@pipeline().parameters.visa"
 					}
@@ -99,7 +99,8 @@
 		],
 		"parameters": {
 			"visa": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "qkr"
 			}
 		},
 		"annotations": []
