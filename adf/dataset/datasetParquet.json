@@ -1,0 +1,35 @@
+{
+	"name": "datasetParquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedServiceAzureDataLakeStorage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"directory": {
+				"type": "string"
+			},
+			"filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().filename",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().directory",
+					"type": "Expression"
+				},
+				"fileSystem": "handson-adf"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
