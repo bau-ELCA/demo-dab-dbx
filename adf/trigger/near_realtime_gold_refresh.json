@@ -2,7 +2,7 @@
 	"name": "near_realtime_gold_refresh",
 	"properties": {
 		"annotations": [],
-		"runtimeState": "Stopped",
+		"runtimeState": "Started",
 		"pipelines": [
 			{
 				"pipelineReference": {
