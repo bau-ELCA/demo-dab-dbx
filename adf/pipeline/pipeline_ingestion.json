@@ -65,6 +65,40 @@
 						}
 					}
 				]
+			},
+			{
+				"name": "Process Data",
+				"type": "DatabricksNotebook",
+				"dependsOn": [
+					{
+						"activity": "Ingestion",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": ""
+					}
+				],
+				"typeProperties": {
+					"notebookPath": "/Users/hamza.slimani@loro.ch/J4: Unity Catalog & ADF/Hands-On: ADF & Databricks",
+					"baseParameters": {
+						"visa": "@pipeline().parameters.visa"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "linkedServiceAzureDatabricks",
+					"type": "LinkedServiceReference"
+				}
 			}
 		],
 		"parameters": {
