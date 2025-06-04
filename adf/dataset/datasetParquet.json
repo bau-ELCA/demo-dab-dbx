@@ -1,0 +1,18 @@
+{
+	"name": "datasetParquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linkedServiceAzureDataLakeStorageHsl",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
