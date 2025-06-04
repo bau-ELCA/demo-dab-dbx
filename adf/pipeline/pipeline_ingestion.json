@@ -84,11 +84,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [
-					{
-						"name": ""
-					}
-				],
+				"userProperties": [],
 				"typeProperties": {
 					"notebookPath": "/Users/hamza.slimani@loro.ch/J4: Unity Catalog & ADF/Hands-On: ADF & Databricks",
 					"baseParameters": {
