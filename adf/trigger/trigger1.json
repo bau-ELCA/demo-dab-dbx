@@ -19,7 +19,7 @@
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 15,
-				"startTime": "2025-06-04T13:45:00",
+				"startTime": "2025-06-04T13:43:00",
 				"endTime": "2025-06-05T14:37:00",
 				"timeZone": "Romance Standard Time"
 			}
