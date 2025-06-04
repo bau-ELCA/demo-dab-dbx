@@ -88,18 +88,58 @@
 				"typeProperties": {
 					"notebookPath": "/Users/hamza.slimani@loro.ch/J4: Unity Catalog & ADF/Hands-On: ADF & Databricks",
 					"baseParameters": {
-						"visa": "@pipeline().parameters.visa"
+						"visa": {
+							"value": "@pipeline().parameters.visa",
+							"type": "Expression"
+						}
 					}
 				},
 				"linkedServiceName": {
 					"referenceName": "linkedServiceAzureDatabricks",
 					"type": "LinkedServiceReference"
 				}
+			},
+			{
+				"name": "Fail Ingestion",
+				"description": "",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "Ingestion",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Ingestion failed: Check if the source file exists.",
+					"errorCode": "400"
+				}
+			},
+			{
+				"name": "Fail Notebook",
+				"description": "",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "Process Data",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Notebook failed: Ensure the path and parameter are correctly set.",
+					"errorCode": "400"
+				}
 			}
 		],
 		"parameters": {
 			"visa": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "hsl"
 			}
 		},
 		"annotations": []
