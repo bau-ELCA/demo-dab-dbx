@@ -17,18 +17,10 @@
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Day",
-				"interval": 1,
+				"frequency": "Minute",
+				"interval": 10,
 				"startTime": "2025-06-04T13:28:00",
-				"timeZone": "Romance Standard Time",
-				"schedule": {
-					"minutes": [
-						0
-					],
-					"hours": [
-						8
-					]
-				}
+				"timeZone": "Romance Standard Time"
 			}
 		}
 	}
