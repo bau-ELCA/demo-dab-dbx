@@ -67,6 +67,12 @@
 				]
 			}
 		],
+		"parameters": {
+			"visa": {
+				"type": "string",
+				"defaultValue": "qkr"
+			}
+		},
 		"annotations": []
 	}
 }
