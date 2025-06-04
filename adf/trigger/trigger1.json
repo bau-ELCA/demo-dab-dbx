@@ -1,0 +1,28 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline_ingestion",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"visa": "yco"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2025-06-04T13:45:00",
+				"endTime": "2025-06-05T14:37:00",
+				"timeZone": "Romance Standard Time"
+			}
+		}
+	}
+}

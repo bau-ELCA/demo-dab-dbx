@@ -92,7 +92,13 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/yves.collet@loro.ch/(Clone) Hands-On: ADF & Databricks"
+					"notebookPath": "/Users/yves.collet@loro.ch/(Clone) Hands-On: ADF & Databricks",
+					"baseParameters": {
+						"visa": {
+							"value": "@pipeline().parameters.visa",
+							"type": "Expression"
+						}
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "linkedServiceAzureDatabricks",
@@ -103,7 +109,7 @@
 		"parameters": {
 			"visa": {
 				"type": "string",
-				"defaultValue": "@pipeline().parameters.visa"
+				"defaultValue": "yco"
 			}
 		},
 		"annotations": []
